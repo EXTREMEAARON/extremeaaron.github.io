@@ -1,101 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Gaming Hub - Minecraft & Mods</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Orbitron', monospace;
-            background: #000;
-            color: #fff;
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
-        .particles-js-canvas-el { position: fixed; top: 0; left: 0; z-index: -1; }
-        header {
-            background: linear-gradient(45deg, #00f0ff, #ff00ff);
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 0 50px #00f0ff;
-            animation: glow 2s infinite alternate;
-        }
-        @keyframes glow { 0% { box-shadow: 0 0 20px #00f0ff; } 100% { box-shadow: 0 0 50px #ff00ff; } }
-        h1 { font-size: 3rem; text-shadow: 0 0 20px #00f0ff; margin-bottom: 0.5rem; }
-        nav { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; }
-        nav a {
-            color: #fff; text-decoration: none; padding: 0.5rem 1rem;
-            border: 2px solid #00f0ff; border-radius: 5px;
-            transition: all 0.3s; box-shadow: 0 0 10px #00f0ff;
-        }
-        nav a:hover { background: #00f0ff; color: #000; transform: scale(1.1); }
-        section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
-        .hero { text-align: center; }
-        .hero h2 { font-size: 2.5rem; color: #ff00ff; text-shadow: 0 0 30px #ff00ff; animation: pulse 1.5s infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .card {
-            background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
-            padding: 2rem; border-radius: 10px; border: 1px solid #00f0ff;
-            box-shadow: 0 0 30px rgba(0,240,255,0.5); transition: transform 0.3s;
-        }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 0 50px #ff00ff; }
-        footer { text-align: center; padding: 2rem; background: #111; }
-        @media (max-width: 768px) { h1 { font-size: 2rem; } nav { flex-direction: column; } }
-    </style>
+  <meta charset="UTF-8">
+  <title>Python SMP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    header {
+      background: #020617;
+      padding: 30px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      color: #38bdf8;
+    }
+    section {
+      padding: 25px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: #020617;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .tag {
+      display: inline-block;
+      background: #1e293b;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin: 5px;
+      font-size: 14px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #94a3b8;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <div id="particles-js"></div>
-    <header>
-        <h1>EXTREMEAARON</h1>
-        <p>A youtuber from Kerala</p>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <section id="home" class="hero">
-        <h2>Welcome to my website</h2>
-        <p>Welcome! I am a human!</p>
-    </section>
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Minecraft Modpack</h3>
-                <p>Custom Forge/NeoForge mods for 1.21.1 with AI bots. [cite:34]</p>
-            </div>
-            <div class="card">
-                <h3>3D Printed Peripherals</h3>
-                <p>DIY mouse stands and keyboard mods for Redgear gear. [cite:30]</p>
-            </div>
-            <div class="card">
-                <h3>Cyberpunk Edits</h3>
-                <p>Shotcut effects with neon RANDOM text overlays. [cite:29]</p>
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Tech enthusiast from Kerala building worlds in Minecraft and hardware hacks. Let's game!</p>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: your.email@example.com | GitHub: yourusername</p>
-    </section>
-    <footer>
-        <p>&copy; 2026 Gamer Hub. Powered by GitHub Pages.</p>
-    </footer>
-    <script>
-        particlesJS('particles-js', {
-            particles: { number: { value: 80 }, color: { value: '#00f0ff' }, shape: { type: 'circle' }, opacity: { value: 0.5 }, size: { value: 3 }, move: { speed: 2 } },
-            interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' } } }
-        });
-    </script>
+
+<header>
+  <h1>🐍 Python SMP</h1>
+  <p>Lifesteal • Events • Custom Features</p>
+</header>
+
+<section>
+
+  <div class="card">
+    <h2>📌 About the Server</h2>
+    <p>
+      Python SMP is a community-driven Lifesteal SMP with balanced gameplay,
+      custom rules, and server events.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>⚙️ Server Features</h2>
+    <div class="tag">❤️ Lifesteal</div>
+    <div class="tag">🧭 Locator Bar</div>
+    <div class="tag">🌍 30k World Border</div>
+    <div class="tag">🤝 Team System</div>
+    <div class="tag">🏠 /sethome & /tpa</div>
+    <div class="tag">⚔️ Custom Balance</div>
+  </div>
+
+  <div class="card">
+    <h2>🚫 Progression Rules</h2>
+    <ul>
+      <li>The End is locked until the official End Event</li>
+      <li>Certain items are restricted for balance</li>
+      <li>No hacking or unfair client mods</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>📢 Join the Community</h2>
+    <p>
+      Discord: <a href="https://discord.gg/YOUR_INVITE">Join Here</a><br>
+      Minecraft Version: Java Edition
+    </p>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Python SMP • Community Server
+</footer>
+
 </body>
 </html>
